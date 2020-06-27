@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Pacifico&family=Raleway:wght@400;700&display=swap');
+
+/*font-family: 'Chelsea Market', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Raleway', sans-serif;*/
 
 * {
-    font-family: 'Lato', ;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
+    outline: none !important;
 }
 
 a {
@@ -22,6 +27,7 @@ body {
     position: relative;
     background: #FFF;
     overflow-x: hidden;
+    background-color: red;
 }
 
 header,
