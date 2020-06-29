@@ -33,6 +33,22 @@
             }
         }
 
+        .btn-primary {
+            border-color: #F4CD54 !important;
+            background-color: transparent;
+            color: #F4CD54 !important;
+
+            &.active {
+                background-color: #F4CD54 !important;
+                color: #FFF !important;
+            }
+
+            &:hover {
+                background-color: #F4CD54 !important;
+                color: #FFF !important;
+            }
+        }
+
         .container-slider {
             width: 100%;
             padding: 0px 24px;
