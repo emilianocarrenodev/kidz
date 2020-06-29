@@ -1,11 +1,129 @@
 .block-banner-main {
 
-    // Breakpoints
-    @include respond-to($phone) {}
+    .swiper-container {
 
-    @include respond-to($phone-tablet) {}
+        .swiper-slide {
+            background-color: #FFA95F;
+            background-repeat: no-repeat;
+            background-position: 80% bottom;
 
-    @include respond-to($tablet-medium) {}
+            // Breakpoints
+            @include respond-to($phone) {
+                background-size: 200px auto;
+                background-image: none !important;
+            }
 
-    @include respond-to($medium-large) {}
+            @include respond-to($phone-tablet) {
+                background-size: 200px auto;
+                background-position: 95% bottom;
+            }
+
+            @include respond-to($tablet-medium) {
+                background-size: 300px auto;
+                background-position: 95% bottom;
+            }
+
+            @include respond-to($medium-large) {
+                background-size: 300px auto;
+            }
+
+            .content-text {
+                height: 542px;
+                padding: 40px 0px;
+
+                // Breakpoints
+                @include respond-to($phone) {
+                    height: auto;
+                    padding-bottom: 80px;
+                }
+
+                @include respond-to($phone-tablet) {
+                    height: auto;
+                    padding-bottom: 80px;
+                }
+
+                @include respond-to($tablet-medium) {
+                    height: 400px;
+                }
+
+                @include respond-to($medium-large) {
+                    height: 400px;
+                }
+
+                h2 {
+                    margin-bottom: 10px;
+                    font-family: 'Pacifico', cursive;
+                    text-align: center;
+                    letter-spacing: 0px;
+                    line-height: 45px;
+                    font-size: 34px;
+                    color: #2F2F2E;
+                }
+
+                h1 {
+                    margin-bottom: 50px;
+                    font-family: 'Chelsea Market', cursive;
+                    text-align: center;
+                    letter-spacing: 0px;
+                    line-height: 40px;
+                    font-size: 35px;
+                    color: #FFF;
+
+                    // Breakpoints
+                    @include respond-to($phone) {
+                        margin-bottom: 30px;
+                    }
+
+                    @include respond-to($phone-tablet) {
+                        margin-bottom: 30px;
+                    }
+
+                    @include respond-to($tablet-medium) {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination {
+            top: 0px;
+            right: 26px;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+
+            // Breakpoints
+            @include respond-to($phone) {
+                display: none;
+            }
+
+            @include respond-to($phone-tablet) {
+                display: none;
+            }
+
+            .swiper-pagination-bullet {
+                width: 36px;
+                height: 36px;
+                margin-bottom: 11px;
+                background-color: #FFF;
+                opacity: 0.54;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                cursor: pointer;
+
+                &.last-child {
+                    margin-bottom: 0px;
+                }
+
+                &.swiper-pagination-bullet-active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }

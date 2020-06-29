@@ -1,0 +1,160 @@
+.block-services-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    // Breakpoints
+    @include respond-to($phone) {
+        flex-direction: column;
+    }
+
+    @include respond-to($phone-tablet) {
+        flex-direction: column;
+    }
+
+    @include respond-to($tablet-medium) {
+        flex-direction: column;
+    }
+
+    a {
+        width: 20%;
+
+        // Breakpoints
+        @include respond-to($phone) {
+            width: 100%;
+        }
+
+        @include respond-to($phone-tablet) {
+            width: 100%;
+        }
+
+        @include respond-to($tablet-medium) {
+            width: 100%;
+        }
+
+        .card {
+            border: none;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+
+            .card-header {
+                min-height: 100px;
+                padding: 30px 20px 20px 20px;
+                text-align: center;
+                border: none;
+                font-family: 'Chelsea Market', cursive;
+                letter-spacing: 0px;
+                line-height: 25px;
+                font-size: 17px;
+                color: #FFF;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                border-radius: 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                &::before {
+                    width: 55px;
+                    height: 55px;
+                    top: -27px;
+                    left: calc(50% - 27px);
+                    position: absolute;
+                    background-size: auto 40px;
+                    background-repeat: no-repeat;
+                    background-position: center 9px;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    border-radius: 50%;
+                    content: '';
+                    z-index: 1;
+                }
+
+                &.type-icon-1 {
+                    background-color: #41B797;
+
+                    &::before {
+                        background-color: #41B797;
+                        background-image: url('../img/neuropsicologia.svg');
+                    }
+                }
+
+                &.type-icon-2 {
+                    background-color: #F4CD54;
+
+                    &::before {
+                        background-color: #F4CD54;
+                        background-image: url('../img/psicologia.svg');
+                    }
+                }
+
+                &.type-icon-3 {
+                    background-color: #51DDCC;
+
+                    &::before {
+                        background-color: #51DDCC;
+                        background-image: url('../img/fonoaudiologia.svg');
+                    }
+                }
+
+                &.type-icon-4 {
+                    background-color: #C2619D;
+
+                    &::before {
+                        background-color: #C2619D;
+                        background-image: url('../img/terapia-ocupacional.svg');
+                    }
+                }
+
+                &.type-icon-5 {
+                    background-color: #FD7165;
+
+                    &::before {
+                        background-color: #FD7165;
+                        background-image: url('../img/psicopedagogia.svg');
+                    }
+                }
+            }
+
+            .card-body {
+                height: 400px;
+                min-height: 250px;
+                padding: 0px;
+                background-color: #FFF;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+
+                // Breakpoints
+                @include respond-to($phone) {
+                    height: auto;
+                }
+
+                @include respond-to($phone-tablet) {
+                    height: auto;
+                }
+
+                @include respond-to($tablet-medium) {
+                    height: auto;
+                }
+            }
+        }
+
+        &:hover {
+
+            .card {
+
+                .card-header {
+                    background-color: #80D96F;
+
+                    &::before {
+                        background-color: #80D96F;
+                    }
+                }
+            }
+        }
+    }
+}

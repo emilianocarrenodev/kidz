@@ -1,0 +1,189 @@
+.block-book-appointment {
+    padding: 50px 0px;
+    background-color: #80D96F;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 135px auto, 84px auto, 102px auto;
+    background-position: 158px 131px, 209px 206px, 85% 76px;
+    background-image: url('../img/book-appointment-1.png'), url('../img/book-appointment-3.png'), url('../img/book-appointment-2.png');
+
+    // Breakpoints
+    @include respond-to($phone) {
+        background-image: none;
+    }
+
+    @include respond-to($phone-tablet) {
+        background-image: none;
+    }
+
+    .container {
+        max-width: 700px;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 20px;
+            font-family: 'Chelsea Market', cursive;
+            letter-spacing: 0px;
+            line-height: 40px;
+            font-size: 38px;
+            color: #FFFFFF;
+        }
+
+        h3 {
+            margin-bottom: 36px;
+            font-family: 'Chelsea Market', cursive;
+            letter-spacing: 0px;
+            line-height: 30px;
+            font-size: 28px;
+            color: #FFF;
+        }
+
+        p {
+            margin-bottom: 30px;
+            letter-spacing: 0px;
+            line-height: 20px;
+            color: #3C3C3C;
+
+            &.text-form-info {
+                margin-top: 11px;
+                margin-bottom: 50px;
+                color: #FFF;
+
+                a {
+                    font-weight: 700;
+                    line-height: 20px;
+                    color: #FFF;
+                }
+            }
+        }
+
+        .form-timeline {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            &::before {
+                width: 250px;
+                height: 2px;
+                top: 10px;
+                left: calc(50% - 129px);
+                position: absolute;
+                background-color: #FFF;
+                content: '';
+            }
+
+            span {
+                letter-spacing: 1.75px;
+                line-height: 16px;
+                color: #FFF;
+
+                &::before {
+                    width: 20px;
+                    height: 20px;
+                    top: 0px;
+                    left: calc(50% - 10px);
+                    margin-bottom: 6px;
+                    position: relative;
+                    border: 2px solid #FFF;
+                    background-color: #80D96F;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    border-radius: 50%;
+                    display: block;
+                    content: '';
+                    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 41, 0.3) !important;
+                    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 41, 0.3) !important;
+                    box-shadow: 0px 3px 6px 0px rgba(0, 0, 41, 0.3) !important;
+                }
+
+                &.active {
+
+                    &::before {
+                        background-color: #FFF;
+                    }
+                }
+            }
+        }
+
+        .btn-primary {
+            width: 100%;
+            max-width: 210px;
+            padding: 14px 60px;
+            text-align: center;
+            color: #80D96F;
+            background-color: #FFF;
+
+            &.type-opacity {
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: #80D96F;
+                    border: 1px solid #FFF !important;
+                    background-color: #FFF !important;
+                }
+            }
+        }
+
+        .form-group {
+
+            label {
+                margin-bottom: 16px;
+                font-family: 'Chelsea Market', cursive;
+                letter-spacing: 0px;
+                line-height: 20px;
+                font-size: 18px;
+                color: #FFF;
+            }
+
+            .form-control {
+                height: auto;
+                padding: 12px 10px;
+                background-color: #FFF;
+                -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 41, 0.5) !important;
+                -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 41, 0.5) !important;
+                box-shadow: 0px 3px 6px 0px rgba(0, 0, 41, 0.5) !important;
+                -webkit-border-radius: 7px;
+                -moz-border-radius: 7px;
+                border-radius: 7px;
+            }
+        }
+
+        .btn-group-toggle {
+            margin-top: 40px;
+
+            .btn-secondary {
+                width: 38px;
+                height: 38px;
+                margin-right: 24px;
+                border: 5px solid #FFF;
+                background-color: #FFF;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+
+                &.active {
+                    background-color: #FDA95F;
+                }
+
+                span {
+                    margin-top: -40px;
+                    margin-left: -65%;
+                    display: block;
+                    position: absolute;
+
+                    &.ml-n4 {
+                        margin-left: -25px !important;
+                    }
+                }
+            }
+        }
+    }
+}
