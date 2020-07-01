@@ -12873,8 +12873,14 @@ footer {
     @media only screen and (min-width: 850px) and (max-width: 990px) {
       footer .footer-copy p {
         padding-top: 30px; } }
-    footer .footer-copy p .img-fluid {
-      margin-top: -5px; }
+    footer .footer-copy p a {
+      letter-spacing: 0px;
+      line-height: 16px;
+      font-weight: 700;
+      font-size: 13px;
+      color: #FFF; }
+      footer .footer-copy p a .img-fluid {
+        margin-top: -5px; }
 
 .block-banner-main .swiper-container .swiper-slide {
   background-color: #FFA95F;
@@ -13112,6 +13118,8 @@ footer {
           font-weight: 700;
           line-height: 20px;
           color: #FFF; }
+    .block-book-appointment .container .alert-danger {
+      display: none; }
     .block-book-appointment .container .form-timeline {
       width: 100%;
       max-width: 300px;
@@ -13191,6 +13199,31 @@ footer {
           position: absolute; }
           .block-book-appointment .container .btn-group-toggle .btn-secondary span.ml-n4 {
             margin-left: -25px !important; }
+  .block-book-appointment .section-form {
+    display: none; }
+    .block-book-appointment .section-form.item-1 {
+      display: block; }
+    .block-book-appointment .section-form .content-finish {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      @media only screen and (max-width: 479px) {
+        .block-book-appointment .section-form .content-finish {
+          height: 300px; } }
+      @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .block-book-appointment .section-form .content-finish {
+          height: 300px; } }
+      .block-book-appointment .section-form .content-finish h2 {
+        margin-bottom: 35px; }
+      .block-book-appointment .section-form .content-finish p {
+        margin: 0px;
+        font-family: 'Chelsea Market', cursive;
+        letter-spacing: 0px;
+        line-height: 20px;
+        font-size: 18px;
+        color: #FFFFFF; }
 
 .block-about-us {
   padding: 90px 0px 30px 0px;

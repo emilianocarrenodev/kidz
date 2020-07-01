@@ -3,10 +3,6 @@ import 'bootstrap';
 
 import { Swiper, Pagination, Navigation, Thumbs } from 'swiper/js/swiper.esm.js';
 
-/*Todos los "load" cargan los bloques recurrentes*/
-$('header').load("header.html");
-$('footer').load("footer.html");
-
 /*Script para el slider del home*/
 if ($.contains(document.body, document.getElementById('slider-main'))) {
 
@@ -75,7 +71,7 @@ if ($.contains(document.body, document.getElementById('swiper-services-thumbs'))
     });
 }
 
-$('header').on('click', '.btn-scrollTop', function(event) {
+$(document).on('click', '.btn-scrollTop', function(event) {
     event.preventDefault();
 
     var item = $(this).data('item');
@@ -83,29 +79,88 @@ $('header').on('click', '.btn-scrollTop', function(event) {
     $('body,html').animate({ scrollTop: $(item).offset().top - 50 }, 3000, 'swing');
 });
 
-$(document).on('submit', '#form-contact', function(event) {
+function changeTimeline(countForm) {
+
+    $('#form-book-appointment .form-timeline span').removeClass('active');
+
+    switch (countForm) {
+        case 0:
+            $('#form-book-appointment .form-timeline .timeline-1').addClass('active');
+            break;
+        case 1:
+            $('#form-book-appointment .form-timeline .timeline-2').addClass('active');
+            break;
+        case 2:
+            $('#form-book-appointment .form-timeline .timeline-3').addClass('active');
+            break;
+    }
+}
+
+var countForm = 0;
+
+$(document).on('submit', '#form-book-appointment', function(event) {
     event.preventDefault();
 
-    $('#form-contact .btn-primary').prop('disabled', true);
+    countForm++;
 
-    $.ajax({
-        cache: false,
-        type: $(this).attr("method"),
-        url: $(this).attr("action"),
-        data: $(this).serialize(),
-        success: function(data) {
+    $('#form-book-appointment .btn-primary').removeClass('type-opacity');
 
-            $('.alert').hide();
-            $('#form-contact .btn-primary').prop('disabled', false);
+    if (countForm < 3) {
 
-            if (data) {
-                $('.alert-success').fadeIn();
-                $("#form-contact")[0].reset();
-            } else {
-                $('.alert-danger').fadeIn();
+        $('#form-book-appointment .form-items').addClass('d-none');
+        $('#form-book-appointment .form-items-' + countForm).removeClass('d-none');
+
+        changeTimeline(countForm);
+
+    } else {
+
+        $('#form-book-appointment .btn-primary').prop('disabled', true);
+
+        $('.alert-danger').hide();
+
+        $.ajax({
+            cache: false,
+            url: $(this).attr("action"),
+            type: $(this).attr("method"),
+            data: $(this).serialize(),
+            success: function(data) {
+
+                var obj = JSON.parse(data);
+
+                $('#form-book-appointment .btn-primary').prop('disabled', false);
+
+                if (obj.alert == 'valid') {
+
+                    $('.section-form').hide();
+                    $('.section-form.item-2').fadeIn();
+
+                } else {
+                    $('.alert-danger').fadeIn();
+                }
             }
+        });
+    }
+});
 
-            setTimeout(function() { $('.alert').hide(); }, 5000);
+$(document).on('click', '#form-book-appointment .btn-back', function(event) {
+    event.preventDefault();
+
+    if (countForm >= 0) {
+
+        countForm--;
+
+        if (countForm < 0) {
+            countForm = 0;
         }
-    });
+
+        $('#form-book-appointment .form-items').addClass('d-none');
+        $('#form-book-appointment .form-items-' + countForm).removeClass('d-none');
+
+        changeTimeline(countForm);
+
+        if (countForm == 0) {
+
+            $('#form-book-appointment .btn-back').removeClass('type-opacity').addClass('type-opacity');
+        }
+    }
 });

@@ -14,7 +14,7 @@
 
 <body data-page="#page-index">
     <!--header-->
-    <header></header>
+    <?php include 'header.php'; ?>
     <!--Fin header-->
     <!--Bloque banner principal servicio-->
     <section class="block-banner-internal-services type-icon-4">
@@ -89,22 +89,22 @@
     <!--Fin bloque informacion principal-->
     <!--Bloque servicios-->
     <section class="block-services-list justify-content-center mb-0 mb-lg-5">
-        <a href="neuropsicologia-evaluacion-psicoeducativa.html" target="_self">
+        <a href="neuropsicologia-evaluacion-psicoeducativa.php" target="_self">
             <div class="card">
                 <h5 class="card-header type-icon-1">Neuropsicología - Evaluación Psicoeducativa</h5>
             </div>
         </a>
-        <a href="psicologia-individuales.html" target="_self">
+        <a href="psicologia-individuales.php" target="_self">
             <div class="card">
                 <h5 class="card-header type-icon-2 pb-5 pb-lg-0">Psicología</h5>
             </div>
         </a>
-        <a href="terapia-de-lenguaje-fonoaudiologia.html" target="_self">
+        <a href="terapia-de-lenguaje-fonoaudiologia.php" target="_self">
             <div class="card">
                 <h5 class="card-header type-icon-3 pb-5 pb-lg-0">Terapia de Lenguaje - Fonoaudiología</h5>
             </div>
         </a>
-        <a href="nivelaciones-academicas-psicopedagogia.html" target="_self">
+        <a href="nivelaciones-academicas-psicopedagogia.php" target="_self">
             <div class="card">
                 <h5 class="card-header type-icon-5">Nivelaciones Académicas - Psicopedagogía</h5>
             </div>
@@ -112,150 +112,7 @@
     </section>
     <!--Fin bloque servicios-->
     <!--Bloque reserva tu cita-->
-    <section class="block-book-appointment mt-0 mt-lg-4">
-        <div class="container">
-            <form action="" method="POST">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Reserva Tu Cita</h2>
-                        <p>Si percibes que tu hijo o hija tiene mucho que ofrecer pero podemos<br>ayudarte a reforzar aspectos para su futuro, Reserva tu cita.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-                        <div class="form-timeline mx-center">
-                            <span class="active">1.Datos</span>
-                            <span>2.Servicio</span>
-                            <span>3.Horario</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="form-item-1 d-none">
-                            <h3>Datos personales</h3>
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="form-group">
-                                        <label for="formName">Nombre</label>
-                                        <input type="text" class="form-control" id="formName" name="name">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <div class="form-group">
-                                        <label for="formPhone">Teléfono</label>
-                                        <input type="text" class="form-control" id="formPhone" name="phone">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <div class="form-group">
-                                        <label for="formEmail">Email</label>
-                                        <input type="email" class="form-control" id="formEmail" name="email">
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="text-form-info">Ingresa tus datos para comenzar tu agendamiento <a href="" target="_blank">ver políticas de datos personales</a></p>
-                        </div>
-                        <div class="form-item-2 d-none">
-                            <h3>Qué servicio te interesa</h3>
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="form-group">
-                                        <label for="formCategory">Categoría</label>
-                                        <select class="form-control" id="formCategory" name="category">
-                                            <option>Virtual</option>
-                                            <option>Virtual</option>
-                                            <option>Virtual</option>
-                                            <option>Virtual</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <div class="form-group">
-                                        <label for="formService">Servicio</label>
-                                        <select class="form-control" id="formService" name="service">
-                                            <option>Terapia Ocupacional</option>
-                                            <option>Terapia Ocupacional</option>
-                                            <option>Terapia Ocupacional</option>
-                                            <option>Terapia Ocupacional</option>
-                                            <option>Terapia Ocupacional</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-4">
-                                    <div class="form-group">
-                                        <label for="formTherapist">Terapeuta</label>
-                                        <select class="form-control" id="formTherapist" name="therapist">
-                                            <option>Dra. Liliana García</option>
-                                            <option>Dra. Liliana García</option>
-                                            <option>Dra. Liliana García</option>
-                                            <option>Dra. Liliana García</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="text-form-info">Cada categoría tiene asignado un terapeuta y un modo de atención</p>
-                        </div>
-                        <div class="form-item-3">
-                            <h3>Horarios disponibles</h3>
-                            <div class="row">
-                                <div class="col-12 col-sm-3">
-                                    <div class="form-group">
-                                        <label for="formDate">Fecha</label>
-                                        <input type="date" class="form-control" id="formDate" name="date" min="2020-06-28">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="btn-group btn-group-toggle mb-4 mb-sm-0" data-toggle="buttons">
-                                        <label class="btn btn-secondary active">
-                                            <span>Lunes</span>
-                                            <input type="checkbox" name="optLu" checked>
-                                        </label>
-                                        <label class="btn btn-secondary">
-                                            <span>Martes</span>
-                                            <input type="checkbox" name="optMa">
-                                        </label>
-                                        <label class="btn btn-secondary">
-                                            <span class="ml-n4">Miercoles</span>
-                                            <input type="checkbox" name="optMi">
-                                        </label>
-                                        <label class="btn btn-secondary">
-                                            <span>Jueves</span>
-                                            <input type="checkbox" name="optJu">
-                                        </label>
-                                        <label class="btn btn-secondary">
-                                            <span>Viernes</span>
-                                            <input type="checkbox" name="optVi">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-3">
-                                    <div class="form-group">
-                                        <label for="formSchedule">Horario</label>
-                                        <select class="form-control" id="formSchedule" name="schedule">
-                                            <option>11:00 AM</option>
-                                            <option>11:00 AM</option>
-                                            <option>11:00 AM</option>
-                                            <option>11:00 AM</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="text-form-info">Escoge la fecha y la hora que prefieras para tu cita, este horario estará sujeto a cambios</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-sm-6 mb-4 mb-sm-0 text-center text-lg-right">
-                        <button type="button" class="btn btn-primary type-opacity">Volver</button>
-                    </div>
-                    <div class="col-12 col-sm-6 text-center text-lg-left">
-                        <button type="submit" class="btn btn-primary">Continuar</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
+    <?php include 'block-book-appointment.php'; ?>
     <!--Fin bloque reserva tu cita-->
     <!--Bloque quienes somos-->
     <section class="block-about-us">
@@ -310,7 +167,7 @@
     </section>
     <!--Fin bloque quienes somos-->
     <!--footer-->
-    <footer></footer>
+    <?php include 'footer.php'; ?>
     <!--Fin footer-->
     <script type="text/javascript" src="./assets/js/bundle.min.js"></script>
 </body>

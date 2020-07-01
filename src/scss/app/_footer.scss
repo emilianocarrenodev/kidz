@@ -122,8 +122,16 @@ footer {
                 padding-top: 30px;
             }
 
-            .img-fluid {
-                margin-top: -5px;
+            a {
+                letter-spacing: 0px;
+                line-height: 16px;
+                font-weight: 700;
+                font-size: 13px;
+                color: #FFF;
+
+                .img-fluid {
+                    margin-top: -5px;
+                }
             }
         }
     }

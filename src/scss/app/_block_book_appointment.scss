@@ -56,6 +56,10 @@
             }
         }
 
+        .alert-danger {
+            display: none;
+        }
+
         .form-timeline {
             width: 100%;
             max-width: 300px;
@@ -183,6 +187,44 @@
                         margin-left: -25px !important;
                     }
                 }
+            }
+        }
+    }
+
+    .section-form {
+        display: none;
+
+        &.item-1 {
+            display: block;
+        }
+
+        .content-finish {
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            // Breakpoints
+            @include respond-to($phone) {
+                height: 300px;
+            }
+
+            @include respond-to($phone-tablet) {
+                height: 300px;
+            }
+
+            h2 {
+                margin-bottom: 35px;
+            }
+
+            p {
+                margin: 0px;
+                font-family: 'Chelsea Market', cursive;
+                letter-spacing: 0px;
+                line-height: 20px;
+                font-size: 18px;
+                color: #FFFFFF;
             }
         }
     }
