@@ -1,12 +1,12 @@
 import './scss/style.scss';
 import 'bootstrap';
 
-import { Swiper, Pagination, Navigation, Thumbs } from 'swiper/js/swiper.esm.js';
+import { Swiper, Pagination, Navigation, Thumbs, Autoplay } from 'swiper/js/swiper.esm.js';
 
 /*Script para el slider del home*/
 if ($.contains(document.body, document.getElementById('slider-main'))) {
 
-    Swiper.use([Pagination]);
+    Swiper.use([Pagination, Autoplay]);
 
     var mySwiper = new Swiper('#slider-main', {
         loop: true,
@@ -77,6 +77,29 @@ $(document).on('click', '.btn-scrollTop', function(event) {
     var item = $(this).data('item');
 
     $('body,html').animate({ scrollTop: $(item).offset().top - 50 }, 3000, 'swing');
+});
+
+var arrayListServices = [];
+
+arrayListServices['Virtual'] = ['Psicología', 'Terapia de Lenguaje–Fonoaudiología', 'Terapia Ocupacional', 'Neuropsicología– Evaluacion Psicoeducativa'];
+arrayListServices['Domicilio'] = ['Psicología', 'Terapia de Lenguaje–Fonoaudiología', 'Terapia Ocupacional', 'Neuropsicología– Evaluacion Psicoeducativa'];
+arrayListServices['Presencial'] = ['Psicología', 'Terapia de Lenguaje–Fonoaudiología', 'Terapia Ocupacional', 'Neuropsicología– Evaluacion Psicoeducativa'];
+
+$(document).on('change', '#formCategory', function(event) {
+    event.preventDefault();
+
+    var value = $(this).val();
+
+    $('#formService').empty();
+
+    arrayListServices[value].forEach(function(item, index) {
+        if (index == 3) {
+            $("#formService").prepend("<option value='" + item + "' selected>" + item + "</option>");
+        } else {
+            $("#formService").prepend("<option value='" + item + "'>" + item + "</option>");
+        }
+    });
+
 });
 
 function changeTimeline(countForm) {

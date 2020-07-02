@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4">
-                    <h2 class="text-center text-lg-left">Evaluacion, diagnostico<br>y terapias Integradas</h2>
+                    <h2 class="text-center text-lg-left">Evaluación, Diagnóstico<br>y Terapias Integradas</h2>
                     <ul>
                         <li class="mb-4"><a href="https://www.facebook.com/kidzterapias/" target="_blank"><img src="./assets/img/green-facebook.svg" class="image-icon"> Facebook Kidz Terapias</a></li>
                         <li><a href="https://instagram.com/kidzterapias?igshid=kis0wzbp2qre" target="_blank"><img src="./assets/img/green-instagram.svg" class="image-icon"> @kidzterapias</a></li>

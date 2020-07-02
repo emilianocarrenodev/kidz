@@ -51,6 +51,7 @@
                                         <label for="formCategory">Categoría</label>
                                         <select class="form-control" id="formCategory" name="category">
                                             <option value="Virtual">Virtual</option>
+                                            <option value="Domicilio">Domicilio</option>
                                             <option value="Presencial">Presencial</option>
                                         </select>
                                     </div>
@@ -59,7 +60,9 @@
                                     <div class="form-group">
                                         <label for="formService">Servicio</label>
                                         <select class="form-control" id="formService" name="service">
+                                            <option value="Neuropsicología– Evaluacion Psicoeducativa" selected>Neuropsicología– Evaluacion Psicoeducativa</option>
                                             <option value="Terapia Ocupacional">Terapia Ocupacional</option>
+                                            <option value="Terapia de Lenguaje–Fonoaudiología">Terapia de Lenguaje–Fonoaudiología</option>
                                             <option value="Psicología">Psicología</option>
                                         </select>
                                     </div>

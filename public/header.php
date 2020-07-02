@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row flex-column-reverse flex-lg-row">
                 <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center">
-                    <p>Solicita orientación al WhatsApp: +57 314 330 1874</p>
+                    <p>Solicita orientación: <a href="tel:+573143301874" target="_self">+57 314 330 1874</a></p>
                 </div>
                 <div class="col-12 col-lg-4 offset-lg-4 mb-3 mb-lg-0 d-flex justify-content-center align-items-center">
                     <a href="https://www.facebook.com/kidzterapias/ " target="_blank">
