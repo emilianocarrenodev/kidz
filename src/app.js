@@ -81,22 +81,23 @@ $(document).on('click', '.btn-scrollTop', function(event) {
 
 var arrayListServices = [];
 
-arrayListServices['Virtual'] = ['Psicología', 'Terapia de Lenguaje–Fonoaudiología', 'Terapia Ocupacional', 'Neuropsicología– Evaluacion Psicoeducativa'];
-arrayListServices['Domicilio'] = ['Psicología', 'Terapia de Lenguaje–Fonoaudiología', 'Terapia Ocupacional', 'Neuropsicología– Evaluacion Psicoeducativa'];
-arrayListServices['Presencial'] = ['Psicología', 'Terapia de Lenguaje–Fonoaudiología', 'Terapia Ocupacional', 'Neuropsicología– Evaluacion Psicoeducativa'];
+arrayListServices['Neuropsicología']                    = ['Juliana de Mier'];
+arrayListServices['Psicología']                         = ['Juliana de Mier', 'Daniela Mora'];
+arrayListServices['Terapia de Lenguaje–Fonoaudiología'] = ['Catalina Robledo'];
+arrayListServices['Psicopedagogía']                     = ['Juliana de Mier'];
 
-$(document).on('change', '#formCategory', function(event) {
+$(document).on('change', '#formService', function(event) {
     event.preventDefault();
 
     var value = $(this).val();
 
-    $('#formService').empty();
+    $('#formTherapist').empty();
 
     arrayListServices[value].forEach(function(item, index) {
         if (index == 3) {
-            $("#formService").prepend("<option value='" + item + "' selected>" + item + "</option>");
+            $("#formTherapist").prepend("<option value='" + item + "' selected>" + item + "</option>");
         } else {
-            $("#formService").prepend("<option value='" + item + "'>" + item + "</option>");
+            $("#formTherapist").prepend("<option value='" + item + "'>" + item + "</option>");
         }
     });
 

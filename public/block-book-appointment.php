@@ -60,10 +60,10 @@
                                     <div class="form-group">
                                         <label for="formService">Servicio</label>
                                         <select class="form-control" id="formService" name="service">
-                                            <option value="Neuropsicología– Evaluacion Psicoeducativa" selected>Neuropsicología– Evaluacion Psicoeducativa</option>
-                                            <option value="Terapia Ocupacional">Terapia Ocupacional</option>
-                                            <option value="Terapia de Lenguaje–Fonoaudiología">Terapia de Lenguaje–Fonoaudiología</option>
+                                            <option value="Neuropsicología" selected>Neuropsicología</option>
                                             <option value="Psicología">Psicología</option>
+                                            <option value="Terapia de Lenguaje–Fonoaudiología">Terapia de Lenguaje–Fonoaudiología</option>
+                                            <option value="Psicopedagogía">Psicopedagogía</option>
                                         </select>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                                     <div class="form-group">
                                         <label for="formTherapist">Terapeuta</label>
                                         <select class="form-control" id="formTherapist" name="therapist">
-                                            <option value="Dra. Liliana García">Dra. Liliana García</option>
+                                            <option value="Juliana de Mier">Juliana de Mier</option>
                                         </select>
                                     </div>
                                 </div>
