@@ -83,6 +83,7 @@ var arrayListServices = [];
 
 arrayListServices['Neuropsicología']                    = ['Juliana de Mier'];
 arrayListServices['Psicología']                         = ['Juliana de Mier', 'Daniela Mora'];
+arrayListServices['Terapia Ocupacional']                = ['Catalina Robledo'];
 arrayListServices['Terapia de Lenguaje–Fonoaudiología'] = ['Catalina Robledo'];
 arrayListServices['Psicopedagogía']                     = ['Juliana de Mier'];
 

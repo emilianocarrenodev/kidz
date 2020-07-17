@@ -62,6 +62,7 @@
                                         <select class="form-control" id="formService" name="service">
                                             <option value="Neuropsicología" selected>Neuropsicología</option>
                                             <option value="Psicología">Psicología</option>
+                                            <option value="Terapia Ocupacional">Terapia Ocupacional</option>
                                             <option value="Terapia de Lenguaje–Fonoaudiología">Terapia de Lenguaje–Fonoaudiología</option>
                                             <option value="Psicopedagogía">Psicopedagogía</option>
                                         </select>
